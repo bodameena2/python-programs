@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Annamacharya University</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+text-align:center;
+}
+
+/* TITLE */
+
+.title{
+display:inline-block;
+padding:10px 20px;
+cursor:pointer;
+border-radius:5px;
+}
+
+.title.active{
+background:orange;
+color:white;
+}
+
+/* MENU */
+
+.menu{
+background:gray;
+padding:10px;
+}
+
+.menu a{
+color:white;
+margin:10px;
+text-decoration:none;
+padding:8px 15px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.menu a:hover{
+background:orange;
+}
+
+.active{
+background:orange;
+}
+
+/* SECTION */
+
+.section{
+display:none;
+margin-top:40px;
+}
+
+/* LOGIN BOX */
+
+.box{
+border:1px solid black;
+width:300px;
+padding:20px;
+margin:auto;
+}
+
+input{
+width:100%;
+padding:6px;
+}
+
+</style>
+
+<script>
+
+function showPage(page,element){
+
+document.getElementById("home").style.display="none";
+document.getElementById("about").style.display="none";
+document.getElementById("contact").style.display="none";
+
+document.getElementById(page).style.display="block";
+
+var tabs=document.querySelectorAll(".menu a, .title");
+
+for(var i=0;i<tabs.length;i++){
+tabs[i].classList.remove("active");
+}
+
+if(element){
+element.classList.add("active");
+}
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h1 class="title active" onclick="showPage('home',this)">Annamacharya University</h1>
+
+<div class="menu">
+
+<a onclick="showPage('home',this)">Home</a>
+<a onclick="showPage('about',this)">About</a>
+<a onclick="showPage('contact',this)">Contact</a>
+
+</div>
+
+<!-- HOME -->
+
+<div id="home" class="section" style="display:block;">
+
+<div class="box">
+
+<h3>Student Login</h3>
+
+<form>
+
+Registration Number:<br>
+<input type="text"><br><br>
+
+Password:<br>
+<input type="password"><br><br>
+
+<input type="submit" value="Login">
+
+</form>
+
+</div>
+
+</div>
+
+<!-- ABOUT -->
+
+<div id="about" class="section">
+
+<h3>About Annamacharya University</h3>
+
+<p>
+Annamacharya University is located in Andhra Pradesh.  
+It offers undergraduate and postgraduate programs for students.
+</p>
+
+</div>
+
+<!-- CONTACT -->
+
+<div id="contact" class="section">
+
+<h3>Contact</h3>
+
+<p>Visit Official Website</p>
+
+<a href=https://youtu.be/Rvb_dt9bS0c" target="_blank">
+Annamacharya University Website
+</a>
+
+</div>
+
+</body>
+</html>
+```
